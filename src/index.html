@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Optimize for IE -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="A vibrant and collaborative community of developers around the world, working together to drive innovation and technical excellence." />
+  <!-- General description for SEO -->
+  <meta name="keywords" content="beecoders, community, developers, software development, mobile apps" />
+  <!-- SEO keywords -->
+  <meta name="author" content="Bee Coders" />
+  <!-- Site author -->
+
+  <title>Bee Coders</title>
+
+  <!-- Prefetch DNS for external assets -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+  <!-- Preconnect to required origins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- CSS files -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="styles.css" rel="stylesheet" /> 
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/beecoderslogo.svg" type="image/x-icon" />
+  <!-- Path to your favicon -->
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://beecoders.club" />
+  <meta property="og:title" content="Bee Coders" />
+  <meta property="og:description"
+    content="A vibrant and collaborative community of developers around the world, working together to drive innovation and technical excellence." />
+  <meta property="og:image" content="https://beecoders.club/images/social-media.png" />
+  <meta property="og:site_name" content="Bee Coders" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@BeeCoders" />
+  <!-- Your twitter handle -->
+  <meta name="twitter:image:alt" content="Logo of BeeCoders Club" />
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="bg-primary border-b-4 border-highlight shadow-lg fixed top-0 w-full z-50">
+    <div class="container mx-auto px-6 py-4 flex flex-wrap items-center justify-between">
+      <div class="flex items-center flex-shrink-0 text-white mr-6">
+        <img class="w-auto h-10" src="images/logo-horizontal.svg" alt="bee coders logo" />
+      </div>
+      <div class="block lg:hidden">
+        <button id="menuButton"
+          class="flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white">
+          <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v15z" />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="h-0 overflow-hidden transition-all w-full block flex-grow lg:flex items- lg:w-auto lg:h-auto justify-end"
+        id="menu">
+        <div class="text-sm flex lg:flex-end justify-center items-center">
+          <a href="#home" class="block mt-4 lg:inline-block lg:mt-0 text-white text hover:text-white mr-4 text-lg">
+            Home
+          </a>
+          <a href="#about" class="block mt-4 lg:inline-block lg:mt-0 text-white text hover:text-white mr-4 text-lg">
+            Sobre
+          </a>
+          <a href="#services" class="block mt-4 lg:inline-block lg:mt-0 text-white text hover:text-white mr-4 text-lg">
+            Serviços
+          </a>
+          <a href="#team" class="block mt-4 lg:inline-block lg:mt-0 text-white text hover:text-white mr-4 text-lg ">
+            Equipe
+          </a>
+          <a href="#budget"
+            class="inline-block text-lg px-4 py-2 drop-shadow-lg leading-none border rounded-xl text-white border-white hover:text-primary hover:bg-white mt-4 lg:mt-0 transition-all">
+            Contato
+          </a>
+        </div>
+        
+        
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="jumbotron bg-secondary text-white py-8" id="home">
+    <div class="container mx-auto px-4 sm:px-8 lg:px-40 xl:px-60 py-16 md:py-32 text-center">
+      <h2 class="text-4xl md:text-4xl font-bold mb-2">
+        Seja Bem-Vindo à <br />
+        Bee Coders
+      </h2>
+      <h3 class="text-md md:text-2xl mb-8">
+        Na BeeCoders, criamos uma comunidade vibrante e colaborativa de
+        profissionais de TI em todo o mundo, trabalhando juntos para impulsionar a
+        inovação e a excelência técnica.
+      </h3>
+      <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal"
+        class="bg-highlight text-black hover:bg-white py-2 px-4 font-semibold rounded-lg shadow-md transition-all">
+        Entre para a Colmeia
+      </button>
+    </div>
+  </div>
+
+  <!-- MODAL -->
+
+  <div id="authentication-modal" tabindex="-1" aria-hidden="true"
+    class="fixed inset-0 flex items-center justify-center z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto h-[calc(100%-1rem)] max-h-full">
+    <div class="relative max-w-md mx-auto my-auto max-h-full">
+      <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <button type="button"
+          class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800"
+          data-modal-hide="authentication-modal">
+          <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+          <span class="sr-only">Close modal</span>
+        </button>
+        <div class="px-6 py-6 lg:px-8">
+          <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-black flex items-center">
+            <img src="./images/register.svg" class="h-8 mr-2" />
+            Faça parte da Colmeia
+          </h3>
+          <p class="mb-4">Por enquanto, somente "abelhas" que receberem nosso convite, estarão aptos a participar. Mas a
+            sua chance está perto de chegar.
+            Cadastre-se aqui e aguarde nosso zumbido.</p>
+          <form class="space-y-6" action="#">
+            <div>
+              <input type="text" name="text" placeholder="Nome" id="collaboratorName"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5"
+                required />
+            </div>
+            <div>
+              <input type="email" name="email" id="collaboratorEmail"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+                placeholder="nome@dominio.com" required />
+            </div>
+            <div>
+              <input type="text" name="phone" id="collaboratorPhone"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+                placeholder="Telefone" required />
+            </div>
+            <div>
+              <input type="text" name="text" placeholder="Cargo" id="collaboratorRole"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500"
+                required />
+            </div>
+            <div>
+              <input type="text" name="text" placeholder="Competências" id="collaboratorSkill"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                required />
+            </div>
+            <div id="join-form-message" class="text-black text-center m-0 p-0">
+              <div style="display: none;" class="pb-0 flex justify-center loading-icon">
+                <svg class="animate-spin h-5 w-5 text-[#9C51D2]" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                  </path>
+                </svg>
+              </div>
+              <strong class="message"></strong>
+            </div>
+
+            <button type="button" id="sendCollaborator"
+              class="w-full text-white bg-primary hover:bg-secondary focus:outline-none rounded-lg text-sm px-5 py-2.5 text-center">
+              Enviar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- END MODAL -->
+  <section id="info" class="bg-gray py-4">
+    <div class="container mx-auto lg:px-52">
+      <div class="container mx-auto px-4 md:px-34 py-8">
+        <div class="flex flex-wrap sm:flex-nowrap gap-4 overflow-hidden">
+
+          <div class="overflow-hidden w-full sm:w-1/3 my-2 px-2 md:mr-0">
+            <div class="flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#FCC700" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-12 h-12">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M6.115 5.19l.319 1.913A6 6 0 008.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 002.288-4.042 1.087 1.087 0 00-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 01-.98-.314l-.295-.295a1.125 1.125 0 010-1.591l.13-.132a1.125 1.125 0 011.3-.21l.603.302a.809.809 0 001.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 001.528-1.732l.146-.292M6.115 5.19A9 9 0 1017.18 4.64M6.115 5.19A8.965 8.965 0 0112 3c1.929 0 3.716.607 5.18 1.64" />
+              </svg>
+
+              <p class="ml-4">
+                <strong>3 países </strong><br />
+                <small>de atuação</small>
+              </p>
+            </div>
+          </div>
+
+          <div class="overflow-hidden w-full sm:w-1/3 my-2 px-2">
+            <div class="flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#FCC700" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-12 h-12">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+
+              <p class="ml-2">
+                <strong>+ 10 anos</strong> <br />
+                <small>de experiência</small>
+              </p>
+            </div>
+          </div>
+
+          <div class="overflow-hidden w-full sm:w-1/3 my-2 px-2">
+            <div class="flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#FCC700" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-12 h-12">
+                <path strokeLinecap="round" strokeLinejoin="round"
+                  d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+              </svg>
+
+              <p class="ml-2">
+                <strong>+ 30 clientes</strong> <br />
+                <small>satisfeitos</small>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="py-8 md:py-24">
+    <!-- Content here -->
+    <div class="container mx-auto px-4 2xl:px-40">
+      <div class="grid grid-cols-12 gap-4 px-2 md:px-0">
+        <div class="lg:col-span-6 col-span-12">
+          <img src="images/team.png" alt="Description of image"
+            class="w-full h-auto overflow-hidden rounded-md shadow-lg" />
+        </div>
+        <div class="lg:col-span-6 col-span-12">
+          <h2 class="text-3xl font-bold pb-4">Sobre a bee coders</h2>
+          <p>
+            A BeeCoders é uma empresa de desenvolvimento de software
+            inovadora, formada por uma equipe de profissionais apaixonados,
+            focada em transformar ideias em realidade. Acreditamos firmemente
+            que as "ideias podem voar" e estamos dedicados a dar asas à
+            inovação.
+          </p>
+
+          <p>
+            Cada membro da nossa equipe traz consigo um conjunto único de
+            habilidades e uma paixão inigualável pelo desenvolvimento de
+            software.
+          </p>
+
+          <p>
+            Operamos como profissionais associados, semelhante à estrutura
+            de um escritório de advocacia, onde cada membro é um parceiro
+            contribuindo com sua expertise e esforços para a empresa. Esta
+            estrutura garante que cada projeto que assumimos receba a atenção
+            completa de nossa equipe e seja tratado com o máximo cuidado e
+            competência.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="services" class="bg-gray py-8 md:py-24">
+    <div class="container mx-auto">
+      <h2 class="text-2xl font-semibold flex items-center justify-center mb-4">
+        <img src="images/beecoders-icon.svg" class="mr-2" width="32" alt="beecoders icon" />
+        Nossos Serviços
+      </h2>
+      <p class="text-center md:px-24 mx-4">
+        Na Bee Coders, nossa missão vai além do simples desenvolvimento de software. Nós transformamos as ideias
+        visionárias de nossos clientes em realidade, trabalhando lado a lado para moldar soluções tecnológicas que
+        impulsionam o progresso e a inovação. Seja desenvolvimento de aplicações web, apps mobile ou manutenção de
+        sistemas, cada projeto é uma oportunidade de ultrapassar fronteiras.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8 mx-4">
+        <div class="card bg-white p-6 rounded-lg shadow-lg text-center flex flex-col items-center justify-center">
+          <img src="images/systems.svg" alt="Ícone de desenvolvimento de sistemas" />
+          <h2 class="text-xl font-bold mb-2">Desenvolvimento de sistemas e apps</h2>
+          <p class="text-gray-700">
+            Transformamos suas ideias em soluções digitais eficientes.
+          </p>
+        </div>
+
+        <div class="card bg-white p-6 rounded-lg shadow-lg text-center flex flex-col items-center justify-center">
+          <img src="images/social.svg" alt="Ícone social" />
+          <h2 class="text-xl font-bold mb-2">
+            Gerenciamento de Redes Sociais
+          </h2>
+          <p class="text-gray-700">
+            Ajudamos sua marca a brilhar e interagir no mundo das redes
+            sociais.
+          </p>
+        </div>
+
+        <div class="card bg-white p-6 rounded-lg shadow-lg text-center flex flex-col items-center justify-center">
+          <img src="images/blog-content.svg" alt="Ícone de blog" />
+          <h2 class="text-xl font-bold mb-2">Conteúdo para Blogs e sites</h2>
+          <p class="text-gray-700">
+            Criamos histórias envolventes que conectam seu público ao seu
+            negócio.
+          </p>
+        </div>
+
+        <div class="card bg-white p-6 rounded-lg shadow-lg text-center flex flex-col items-center justify-center">
+          <img src="images/google-ads.svg" alt="Ícone de ads" />
+          <h2 class="text-xl font-bold mb-2">Facebook Ads e Google Ads</h2>
+          <p class="text-gray-700">
+            Criamos campanhas que colocam seu negócio no topo das pesquisas do
+            Google.
+          </p>
+        </div>
+
+        <div class="card bg-white p-6 rounded-lg shadow-lg text-center flex flex-col items-center justify-center">
+          <img src="images/email-marketing.svg" alt="Ícone de email marketing" />
+          <h2 class="text-xl font-bold mb-2">
+            Campanhas de E-mail Marketing
+          </h2>
+          <p class="text-gray-700">
+            Entregamos suas ofertas diretamente na caixa de entrada do
+            cliente.
+          </p>
+        </div>
+
+        <div class="card bg-white p-6 rounded-lg shadow-lg text-center flex flex-col items-center justify-center">
+          <img src="images/seo.svg" alt="Ícone de seo" />
+          <h2 class="text-xl font-bold mb-2">Consultoria de SEO</h2>
+          <p class="text-gray-700">
+            Posicionamos seu site para ser encontrado facilmente nas buscas
+            orgânicas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team" class="py-8 md:py-24">
+    <div class="container mx-auto px-4 md:px-52">
+      <h2 class="text-2xl font-semibold flex items-center justify-center mb-4">
+        <img src="images/beecoders-icon.svg" class="mr-2" width="32" alt="beecoders icon" />
+        Nossa Colmeia
+      </h2>
+      <p class="text-center md:px-24">Os membros da Bee Coders são parte de uma comunidade de desenvolvedores
+        profissionais globais. A rede da Bee Coders agrega infinitas oportunidades para nossos colaboradores e clientes.
+      </p>
+      <div class="flex flex-row flex-wrap gap-4 mt-8 justify-items-center justify-center">
+        <div class="card w-40 sm:w-48 bg-gray p-6 rounded-lg shadow-xl text-center mb-2">
+          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2"
+            src="https://farmaciasdeplantao.info/dist/imgs/profiles/luiz2.png" alt="Member 1" />
+          <h2 class="text-xl  font-bold mb-2">Luiz Alberto Mesquita</h2>
+          <p class="text-sm">Project Manager / Systems Analyst</p>
+        </div>
+
+        <div class="card w-40 sm:w-48 bg-gray p-6 rounded-lg shadow-xl text-center mb-2">
+          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2"
+            src="https://farmaciasdeplantao.info/dist/imgs/profiles/rafa2.png" alt="Member 2" />
+          <h2 class="text-xl  font-bold mb-2">Rafael Rabelo</h2>
+          <p class="text-sm">Fullstack Developer / User Experience</p>
+        </div>
+
+        <div class="card w-40 sm:w-48 bg-gray p-6 rounded-lg shadow-xl text-center mb-2">
+          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2"
+            src="https://farmaciasdeplantao.info/dist/imgs/profiles/mateus.png" alt="Member 3" />
+          <h2 class="text-xl  font-bold mb-2">Mateus Carvalho</h2>
+          <p class="text-sm">Frontend Developer</p>
+        </div>
+        <div class="card w-40 sm:w-48 bg-gray p-6 rounded-lg shadow-xl text-center mb-2">
+          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2"
+            src="https://farmaciasdeplantao.info/dist/imgs/profiles/pial2.png" alt="Member 1" />
+          <h2 class="text-xl  font-bold mb-2">Luis Antônio</h2>
+          <p class="text-sm">Backend Developer</p>
+        </div>
+
+        <div class="card w-40 sm:w-48 bg-gray p-6 rounded-lg shadow-xl text-center mb-2">
+          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2"
+            src="https://farmaciasdeplantao.info/dist/imgs/profiles/emanuel.png" alt="Member 2" />
+          <h2 class="text-xl  font-bold mb-2">Emanuel Mesquita</h2>
+          <p class="text-sm">Fullstack Developer</p>
+        </div>
+
+        <div class="card w-40 sm:w-48 bg-gray p-6 rounded-lg shadow-xl text-center mb-2">
+          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2" src="images/renata-profile.jpg" alt="Member 3" />
+          <h2 class="text-xl  font-bold mb-2">Renata Guedes</h2>
+          <p class="text-sm">Backend Developer</p>
+        </div>
+
+        <div class="card w-40 sm:w-48 bg-gray p-6 rounded-lg shadow-xl text-center mb-2">
+          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2" src="images/alano-profile.jpg" alt="Member 2" />
+          <h2 class="text-xl  font-bold mb-2">Alano Morais</h2>
+          <p class="text-sm">Fullstack Developer</p>
+        </div>
+
+        <div class="card w-40 sm:w-48 bg-gray p-6 rounded-lg shadow-xl text-center mb-2">
+          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2" src="images/karol-profile.jpg" alt="Member 3" />
+          <h2 class="text-xl  font-bold mb-2">Karoline Pimentel</h2>
+          <p class="text-sm">Advertiser / Product Manager</p>
+        </div>
+
+        <div class="card w-40 sm:w-48 bg-gray p-6 rounded-lg shadow-xl text-center mb-2">
+          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2" src="images/germano-profile.jpg" alt="Member 3" />
+          <h2 class="text-xl  font-bold mb-2">Germano Duarte</h2>
+          <p class="text-sm">Backend Developer</p>
+        </div>
+
+        <div class="card w-40 sm:w-48 bg-gray p-6 rounded-lg shadow-xl text-center mb-2">
+          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2"
+            src="images/lucas-profile.jpg"
+            alt="Member 3" />
+          <h2 class="text-xl  font-bold mb-2">Lucas Santos</h2>
+          <p class="text-sm">DevOps Engineer</p>
+        </div>
+
+        <div class="card w-40 sm:w-48 bg-gray p-6 rounded-lg shadow-xl text-center mb-2">
+          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2" src="images/joao-facchine-profile.jpg" alt="Member 3" />
+          <h2 class="text-xl  font-bold mb-2">João Facchini</h2>
+          <p class="text-sm">Product Designer Specialist</p>
+        </div>
+
+        <div class="card w-40 sm:w-48 bg-gray p-6 rounded-lg shadow-xl text-center mb-2">
+          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2" src="images/flavia-profile.jpg" alt="Member 3" />
+          <h2 class="text-xl  font-bold mb-2">Flavia Melo</h2>
+          <p class="text-sm">Product Owner</p>
+        </div>
+
+        <div class="card w-40 sm:w-48 bg-gray p-6 rounded-lg shadow-xl text-center mb-2">
+          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2" src="images/rui-profile.jpg" alt="Member 3" />
+          <h2 class="text-xl  font-bold mb-2">Rui Barreira</h2>
+          <p class="text-sm">Fullstack and Mobile Developer</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="budget" class="bg-secondary py-24">
+    <div class="container mx-auto px-4 md:px-52">
+      <h2 class="text-2xl text-white font-semibold flex items-center justify-center mb-4">
+        Entre em Contato
+      </h2>
+      <p class="text-white text-center md:px-24">Na Bee Coders, entendemos que cada projeto tem suas necessidades
+        únicas. Seja uma aplicação web personalizada, um aplicativo mobile inovador ou um serviço de manutenção de
+        sistemas, estamos aqui para te ajudar a atingir os melhores resultados .</p>
+      <form class="rounded px-8 pt-6 max-w-xl mx-auto">
+        <div class="mb-4">
+          <input
+            class="shadow appearance-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="username" type="text" placeholder="Nome">
+        </div>
+        <div class="mb-6">
+          <input
+            class="shadow appearance-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="emailBudget" type="email" placeholder="Email">
+        </div>
+        <div class="mb-6">
+          <input
+            class="shadow appearance-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="phone" type="text" placeholder="Telefone">
+        </div>
+        <div class="mb-4">
+          <textarea
+            class="shadow appearance-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="message" placeholder="Mensagem" rows="6"></textarea>
+        </div>
+        <p id="successMessage" style="display: none;" class="text-white text-center mb-6">
+          <strong>
+            Enviado com sucesso!
+          </strong>
+        </p>
+        <div class="flex justify-center">
+          <span id="loadingIndicator" style="display: none;" class="mb-6">
+            <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor"
+                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+              </path>
+            </svg>
+          </span>
+        </div>
+        <div class="flex items-center justify-center">
+          <button type="button" id="sendBudget"
+            class="bg-highlight text-black hover:bg-white py-2 px-4 font-semibold rounded-lg shadow-md transition-all">
+            Enviar
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+
+  <footer class="text-start bg-primary text-white px-4 md:px-16 py-10 md:px-0 md:py-2">
+    <div class="container mx-auto block md:flex md:justify-between md:items-center justify-center">
+      <div class="py-4">
+        <div class="flex items-center mb-4 md:mb-0">
+          <p class="m-0 text-sm">
+            BeeCoders &copy; 2023. Todos os direitos reservados.
+          </p>
+        </div>
+        <p class="m-0 text-sm text-gray-500">
+          <a target="_blank" href="mailto:contact@beecoders.club">Contato: <strong>contact@beecoders.club</strong></a>
+        </p>
+      </div>
+
+      <div class="ms-auto flex items-start">
+        <a href="#" class="m-0 text-sm mr-4 underline">Política de privacidade</a>
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+          </svg>
+        </a>
+        <a href="#" class="mx-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+          </svg>
+        </a>
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://api.whatsapp.com/send?phone=+5585996826836&text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento"
+    target="_blank" rel="noopener noreferrer" 
+    class="flex items-center justify-center w-16 h-16 fixed bottom-2 right-2 hover:drop-shadow-xl hover:scale-95 drop-shadow-md transition-transform bg-green-500 border border-white rounded-full mb-4 mr-4">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="white" viewBox="0 0 24 24">
+      <path
+        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+    </svg>
+  </a>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- <script src="main.js"></script> -->
+  <script>
+    document
+      .getElementById("menuButton")
+      .addEventListener("click", function () {
+        var menu = document.getElementById("menu");
+        if (menu.style.height === "auto") {
+          menu.style.height = "0";
+        } else {
+          menu.style.height = "auto";
+        }
+      });
+    document
+      .querySelector('[data-modal-toggle="authentication-modal"]')
+      .addEventListener("click", function () {
+        document.getElementById("authentication-modal").style.display =
+          "block";
+      });
+
+    document
+      .querySelector('[data-modal-hide="authentication-modal"]')
+      .addEventListener("click", function () {
+        document.getElementById("authentication-modal").style.display =
+          "none";
+      });
+    var modal = document.getElementById("authentication-modal");
+
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+
+    window.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        modal.style.display = "none";
+      }
+    });
+  </script>
+</body>
+
+</html>
