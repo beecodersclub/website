@@ -2,6 +2,9 @@ module.exports = {
   content: ["./docs/*.html"],
   theme: {
     extend: {
+      backgroundImage: theme => ({
+        'hero': "url('/images/bg-hero.jpg')",
+      }),
       colors: {
         'primary': '#9C51D2',
         'secondary': '#6A0DAD',
