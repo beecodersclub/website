@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
 
 <head>
   <meta charset="UTF-8" />
@@ -30,7 +30,6 @@
 
   <!-- Favicon -->
   <link rel="icon" href="images/beecoderslogo.svg" type="image/x-icon" />
-  <!-- Path to your favicon -->
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
@@ -53,46 +52,44 @@
   <nav class="bg-primary border-b-4 border-highlight shadow-lg fixed top-0 w-full z-50 overflow-hidden" >
     <div class="container mx-auto px-6 py-4 flex flex-wrap justify-between">
       <div class="flex items-center flex-shrink-0 text-white mr-6">
-        <img class="w-auto h-10" src="images/logo-horizontal.svg" alt="bee coders logo" />
+        <img class="w-auto h-10 md:h-12" src="images/logo-horizontal.svg" alt="bee coders logo" />
       </div>
       <div class="block lg:hidden">
         <button id="menuButton"
           class="flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white">
-          <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <svg class="fill-current h-5 w-5" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <title>Menu</title>
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v15z" />
           </svg>
         </button>
       </div>
       <div
-        class="h-0 transition-all justify-end items-end lg:flex lg:w-auto lg:h-auto"
+        class="h-0 transition-all justify-center items-center lg:flex lg:w-auto lg:h-auto"
         id="menu">
         <div class="text-sm flex flex-wrap lg:flex-end justify-center items-center">
-          <a href="#home" class="block mt-4 lg:inline-block lg:mt-0 text-white text hover:text-white mr-4 text-lg">
+          <a href="#home" class="block mt-4 lg:inline-block lg:mt-0 text-white text hover:underline mr-4 text-lg">
             Home
           </a>
-          <a href="#about" class="block mt-4 lg:inline-block lg:mt-0 text-white text hover:text-white mr-4 text-lg">
+          <a href="#about" class="block mt-4 lg:inline-block lg:mt-0 text-white text hover:underline mr-4 text-lg">
             Sobre
           </a>
-          <a href="#services" class="block mt-4 lg:inline-block lg:mt-0 text-white text hover:text-white mr-4 text-lg">
+          <a href="#services" class="block mt-4 lg:inline-block lg:mt-0 text-white text hover:underline mr-4 text-lg">
             Serviços
           </a>
-          <a href="#team" class="block mt-4 lg:inline-block lg:mt-0 text-white text hover:text-white mr-4 text-lg ">
+          <a href="#team" class="block mt-4 lg:inline-block lg:mt-0 text-white text hover:underline mr-4 text-lg ">
             Equipe
           </a>
           <a href="#budget"
             class="inline-block text-lg px-4 py-2 drop-shadow-lg leading-none border rounded-xl text-white border-white hover:text-primary hover:bg-white mt-4 lg:mt-0 transition-all">
             Contato
           </a>
-        </div>
-        
-        
+        </div>        
       </div>
     </div>
   </nav>
 
   <!-- Hero -->
-  <div class="bg-hero bg-no-repeat bg-cover bg-center bg-secondary text-white py-8 mt-16" id="home">
+  <div class="bg-hero bg-no-repeat bg-cover bg-center bg-secondary text-white py-8 mt-16 md:mt-20" id="home">
     <div class="container mx-auto px-4 sm:px-8 lg:px-40 xl:px-60 py-16 md:py-32 text-center">
       <h2 class="text-4xl md:text-4xl font-bold mb-2">
         Seja Bem-Vindo à <br />
@@ -183,8 +180,8 @@
       </div>
     </div>
   </div>
-
   <!-- END MODAL -->
+
   <section id="info" class="bg-gray py-4">
     <div class="container mx-auto lg:px-52">
       <div class="container mx-auto px-4 md:px-34 py-8">
@@ -280,7 +277,7 @@
   <section id="services" class="bg-gray py-8 md:py-24">
     <div class="container mx-auto">
       <h2 class="text-2xl font-semibold flex items-center justify-center mb-4">
-        <img src="images/beecoders-icon.svg" class="mr-2" width="32" alt="beecoders icon" />
+        <img src="images/beecoderslogo.svg" class="mr-2" width="40" alt="beecoders icon" />
         Nossos Serviços
       </h2>
       <p class="text-center md:px-24 mx-4">
@@ -353,7 +350,7 @@
   <section id="team" class="py-8 md:py-24">
     <div class="container mx-auto px-4 md:px-52">
       <h2 class="text-2xl font-semibold flex items-center justify-center mb-4">
-        <img src="images/beecoders-icon.svg" class="mr-2" width="32" alt="beecoders icon" />
+        <img src="images/beecoderslogo.svg" class="mr-2" width="40" alt="beecoders icon" />
         Nossa Colmeia
       </h2>
       <p class="text-center md:px-24">Os membros da Bee Coders são parte de uma comunidade de desenvolvedores
@@ -551,9 +548,8 @@
   </a>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <!-- <script src="main.js"></script> -->
+  <script src="main.js"></script>
   <script>
     document
       .getElementById("menuButton")
