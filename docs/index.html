@@ -50,8 +50,8 @@
 
 <body>
   <!-- Navigation -->
-  <nav class="bg-primary border-b-4 border-highlight shadow-lg fixed top-0 w-full z-50">
-    <div class="container mx-auto px-6 py-4 flex flex-wrap items-center justify-between">
+  <nav class="bg-primary border-b-4 border-highlight shadow-lg fixed top-0 w-full z-50 overflow-hidden" >
+    <div class="container mx-auto px-6 py-4 flex flex-wrap justify-between">
       <div class="flex items-center flex-shrink-0 text-white mr-6">
         <img class="w-auto h-10" src="images/logo-horizontal.svg" alt="bee coders logo" />
       </div>
@@ -65,9 +65,9 @@
         </button>
       </div>
       <div
-        class="h-0 overflow-hidden transition-all w-full block flex-grow lg:flex items- lg:w-auto lg:h-auto justify-end"
+        class="h-0 transition-all justify-end items-end lg:flex lg:w-auto lg:h-auto"
         id="menu">
-        <div class="text-sm flex lg:flex-end justify-center items-center">
+        <div class="text-sm flex flex-wrap lg:flex-end justify-center items-center">
           <a href="#home" class="block mt-4 lg:inline-block lg:mt-0 text-white text hover:text-white mr-4 text-lg">
             Home
           </a>
