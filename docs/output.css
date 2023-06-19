@@ -807,7 +807,7 @@ video {
   background-color: rgb(34 197 94 / var(--tw-bg-opacity));
 }
 .bg-hero {
-  background-image: url('/images/bg-hero.jpg');
+  background-image: url('/images/bg-hero.webp');
 }
 .bg-cover {
   background-size: cover;
