@@ -16,13 +16,9 @@
 
   <title>Bee Coders</title>
 
-  <!-- Prefetch DNS for external assets -->
-  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-  <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-
   <!-- Preconnect to required origins -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- CSS files -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
@@ -49,7 +45,7 @@
 
 <body>
   <!-- Navigation -->
-  <nav class="bg-primary border-b-4 border-highlight shadow-lg fixed top-0 w-full z-50 overflow-hidden" >
+  <nav class="bg-primary border-b-4 border-highlight shadow-lg fixed top-0 w-full z-50 overflow-hidden">
     <div class="container mx-auto px-6 py-4 flex flex-wrap justify-between">
       <div class="flex items-center flex-shrink-0 text-white mr-6">
         <img class="w-auto h-10 md:h-12" src="images/logo-horizontal.svg" alt="bee coders logo" />
@@ -63,9 +59,7 @@
           </svg>
         </button>
       </div>
-      <div
-        class="h-0 transition-all justify-center items-center lg:flex lg:w-auto lg:h-auto"
-        id="menu">
+      <div class="h-0 transition-all justify-center items-center lg:flex lg:w-auto lg:h-auto" id="menu">
         <div class="text-sm flex flex-wrap lg:flex-end justify-center items-center">
           <a href="#home" class="block mt-4 lg:inline-block lg:mt-0 text-white text hover:underline mr-4 text-lg">
             Home
@@ -83,7 +77,7 @@
             class="inline-block text-lg px-4 py-2 drop-shadow-lg leading-none border rounded-xl text-white border-white hover:text-primary hover:bg-white mt-4 lg:mt-0 transition-all">
             Contato
           </a>
-        </div>        
+        </div>
       </div>
     </div>
   </nav>
@@ -241,34 +235,30 @@
   <section id="about" class="py-8 md:py-24">
     <!-- Content here -->
     <div class="container mx-auto px-4 2xl:px-40">
-      <div class="grid grid-cols-12 gap-4 px-2 md:px-0">
+      <div class="grid grid-cols-12 gap-6 px-2 md:px-0">
         <div class="lg:col-span-6 col-span-12">
           <img src="images/team.png" alt="Description of image"
             class="w-full h-auto overflow-hidden rounded-md shadow-lg" />
         </div>
-        <div class="lg:col-span-6 col-span-12">
-          <h2 class="text-3xl font-bold pb-4">Sobre a bee coders</h2>
+        <div class="lg:col-span-6 col-span-12 text-justify">
+          <h2 class="text-3xl font-bold pb-4">Sobre a Bee Coders</h2>
           <p class="mb-4">
-            A BeeCoders é uma empresa de desenvolvimento de software
-            inovadora, formada por uma equipe de profissionais apaixonados,
-            focada em transformar ideias em realidade. Acreditamos firmemente
-            que as "ideias podem voar" e estamos dedicados a dar asas à
-            inovação.
+            Somos um grupo inovador que busca transformar ideias em realidade por meio de
+            soluções tecnológicas sob medida. Nossa missão é oferecer serviços de desenvolvimento de software,
+            consultoria em TI e marketing digital em um ambiente colaborativo.
           </p>
 
           <p class="mb-4">
-            Cada membro da nossa equipe traz consigo um conjunto único de
-            habilidades e uma paixão inigualável pelo desenvolvimento de
-            software.
+            Acreditamos que a tecnologia pode impulsionar o crescimento dos negócios e criar experiências incríveis para
+            os usuários. Com uma equipe apaixonada por desenvolvimento de software, combinamos criatividade, habilidades
+            técnicas e conhecimento especializado para entregar resultados excepcionais.
           </p>
 
-          <p class="mb-4">
-            Operamos como profissionais associados, semelhante à estrutura
-            de um escritório de advocacia, onde cada membro é um parceiro
-            contribuindo com sua expertise e esforços para a empresa. Esta
-            estrutura garante que cada projeto que assumimos receba a atenção
-            completa de nossa equipe e seja tratado com o máximo cuidado e
-            competência.
+          <p>
+            Somos também uma vibrante comunidade de profissionais de TI. Como um clube de
+            membros associados, oferecemos uma série de benefícios exclusivos aos nossos membros. Isso inclui
+            treinamentos recorrentes para o aprimoramento contínuo de habilidades, acesso a licenças de software
+            premium, eventos de networking e uma plataforma para compartilhamento de conhecimento e experiências.
           </p>
         </div>
       </div>
@@ -283,8 +273,7 @@
       <p class="text-center md:px-24 mx-4">
         Na Bee Coders, nossa missão vai além do simples desenvolvimento de software. Nós transformamos as ideias
         visionárias de nossos clientes em realidade, trabalhando lado a lado para moldar soluções tecnológicas que
-        impulsionam o progresso e a inovação. Seja desenvolvimento de aplicações web, apps mobile ou manutenção de
-        sistemas, cada projeto é uma oportunidade de ultrapassar fronteiras.
+        impulsionam o progresso e a inovação. Cada projeto é uma oportunidade de ultrapassar fronteiras.
       </p>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8 mx-4">
         <div class="card bg-white p-6 rounded-lg shadow-lg text-center flex flex-col items-center justify-center">
@@ -348,94 +337,101 @@
   </section>
 
   <section id="team" class="py-8 md:py-24">
-    <div class="container mx-auto px-4 md:px-52">
-      <h2 class="text-2xl font-semibold flex items-center justify-center mb-4">
+    <div class="container mx-auto">
+      <h2 class="text-2xl font-semibold flex items-center justify-center mb-4 px-4 md:px-52">
         <img src="images/beecoderslogo.svg" class="mr-2" width="40" alt="beecoders icon" />
         Nossa Colmeia
       </h2>
-      <p class="text-center md:px-24">Os membros da Bee Coders são parte de uma comunidade de desenvolvedores
+      <p class="text-center px-4 md:px-52">Os membros da Bee Coders são parte de uma comunidade de desenvolvedores
         profissionais globais. A rede da Bee Coders agrega infinitas oportunidades para nossos colaboradores e clientes.
       </p>
       <div class="flex flex-row flex-wrap gap-4 mt-8 justify-items-center justify-center">
         <div class="card w-40 sm:w-48 bg-gray p-6 rounded-lg shadow-xl text-center mb-2">
-          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2"
-            src="images/profiles/luiz.png" alt="Alberto Mesquita" />
+          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2" src="images/profiles/luiz.png"
+            alt="Alberto Mesquita" />
           <h2 class="text-xl  font-bold mb-2">Alberto Mesquita</h2>
           <p class="text-sm">Project Manager / Systems Analyst</p>
         </div>
 
         <div class="card w-40 sm:w-48 bg-gray p-6 rounded-lg shadow-xl text-center mb-2">
-          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2"
-            src="images/profiles/rafa.png" alt="Member 2" />
+          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2" src="images/profiles/rafa.png"
+            alt="Member 2" />
           <h2 class="text-xl  font-bold mb-2">Rafael Rabelo</h2>
           <p class="text-sm">Fullstack Developer / User Experience</p>
         </div>
 
         <div class="card w-40 sm:w-48 bg-gray p-6 rounded-lg shadow-xl text-center mb-2">
-          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2"
-            src="images/profiles/mateus.png" alt="Member 3" />
+          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2" src="images/profiles/mateus.png"
+            alt="Member 3" />
           <h2 class="text-xl  font-bold mb-2">Mateus Carvalho</h2>
           <p class="text-sm">Frontend Developer</p>
         </div>
         <div class="card w-40 sm:w-48 bg-gray p-6 rounded-lg shadow-xl text-center mb-2">
-          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2"
-            src="images/profiles/pial.png" alt="Member 1" />
+          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2" src="images/profiles/pial.png"
+            alt="Member 1" />
           <h2 class="text-xl  font-bold mb-2">Luis Antônio</h2>
           <p class="text-sm">Backend Developer</p>
         </div>
 
         <div class="card w-40 sm:w-48 bg-gray p-6 rounded-lg shadow-xl text-center mb-2">
-          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2"
-            src="images/profiles/emanuel.png" alt="Member 2" />
+          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2" src="images/profiles/emanuel.png"
+            alt="Member 2" />
           <h2 class="text-xl  font-bold mb-2">Emanuel Mesquita</h2>
           <p class="text-sm">Fullstack Developer</p>
         </div>
 
         <div class="card w-40 sm:w-48 bg-gray p-6 rounded-lg shadow-xl text-center mb-2">
-          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2" src="images/profiles/renata-profile.jpg" alt="Member 3" />
+          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2" src="images/profiles/renata-profile.jpg"
+            alt="Member 3" />
           <h2 class="text-xl  font-bold mb-2">Renata Guedes</h2>
           <p class="text-sm">Backend Developer</p>
         </div>
 
         <div class="card w-40 sm:w-48 bg-gray p-6 rounded-lg shadow-xl text-center mb-2">
-          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2" src="images/profiles/alano-profile.jpg" alt="Member 2" />
+          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2" src="images/profiles/alano-profile.jpg"
+            alt="Member 2" />
           <h2 class="text-xl  font-bold mb-2">Alano Morais</h2>
           <p class="text-sm">Fullstack Developer</p>
         </div>
 
         <div class="card w-40 sm:w-48 bg-gray p-6 rounded-lg shadow-xl text-center mb-2">
-          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2" src="images/profiles/karol-profile.jpg" alt="Member 3" />
+          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2" src="images/profiles/karol-profile.jpg"
+            alt="Member 3" />
           <h2 class="text-xl  font-bold mb-2">Karoline Pimentel</h2>
           <p class="text-sm">Advertiser / Product Manager</p>
         </div>
 
         <div class="card w-40 sm:w-48 bg-gray p-6 rounded-lg shadow-xl text-center mb-2">
-          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2" src="images/profiles/germano-profile.jpg" alt="Member 3" />
+          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2" src="images/profiles/germano-profile.jpg"
+            alt="Member 3" />
           <h2 class="text-xl  font-bold mb-2">Germano Duarte</h2>
           <p class="text-sm">Backend Developer</p>
         </div>
 
         <div class="card w-40 sm:w-48 bg-gray p-6 rounded-lg shadow-xl text-center mb-2">
-          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2"
-            src="images/profiles/lucas-profile.jpg" alt="Member 3" />
+          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2" src="images/profiles/lucas-profile.jpg"
+            alt="Member 3" />
           <h2 class="text-xl  font-bold mb-2">Lucas Santos</h2>
           <p class="text-sm">DevOps Engineer</p>
         </div>
 
         <div class="card w-40 sm:w-48 bg-gray p-6 rounded-lg shadow-xl text-center mb-2">
-          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2" src="images/profiles/joao-facchine-profile.jpg" alt="Member 3" />
+          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2"
+            src="images/profiles/joao-facchine-profile.jpg" alt="Member 3" />
           <h2 class="text-xl  font-bold mb-2">João Facchini</h2>
           <p class="text-sm">Product Designer Specialist</p>
         </div>
 
         <div class="card w-40 sm:w-48 bg-gray p-6 rounded-lg shadow-xl text-center mb-2">
-          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2" src="images/profiles/flavia-profile.jpg" alt="Member 3" />
+          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2" src="images/profiles/flavia-profile.jpg"
+            alt="Member 3" />
           <h2 class="text-xl  font-bold mb-2">Flavia Melo</h2>
           <p class="text-sm">Product Owner</p>
         </div>
 
         <div class="card w-40 sm:w-48 bg-gray p-6 rounded-lg shadow-xl text-center mb-2">
-          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2" src="images/profiles/rui-profile.jpg" alt="Member 3" />
+          <img class="mx-auto h-auto w-24 lg:h-auto lg:w-32 rounded-full mb-2" src="images/profiles/rui-profile.jpg"
+            alt="Member 3" />
           <h2 class="text-xl  font-bold mb-2">Rui Barreira</h2>
           <p class="text-sm">Fullstack and Mobile Developer</p>
         </div>
@@ -444,7 +440,7 @@
     </div>
   </section>
 
-  <section id="budget" class="bg-secondary py-24">
+  <section id="budget" class="bg-secondary py-8 md:py-24">
     <div class="container mx-auto px-4 md:px-52">
       <h2 class="text-2xl text-white font-semibold flex items-center justify-center mb-4">
         Entre em Contato
@@ -515,20 +511,23 @@
 
       <div class="ms-auto flex items-start">
         <a href="#" class="m-0 text-sm mr-4 underline">Política de privacidade</a>
-        <a href="https://www.instagram.com/beecodersclub/" aria-label="instagram link" >
-          <svg alt="instagram link" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+        <a href="https://www.instagram.com/beecodersclub/" aria-label="instagram link">
+          <svg alt="instagram link" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor"
+            viewBox="0 0 24 24">
             <path
               d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
           </svg>
         </a>
         <a href="www.linkedin.com/in/beecodersclub/" class="mx-4" aria-label="linkedin link">
-          <svg alt="linkedin link" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+          <svg alt="linkedin link" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor"
+            viewBox="0 0 24 24">
             <path
               d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
           </svg>
         </a>
         <a href="https://twitter.com/beecodersclub" aria-label="twitter link">
-          <svg alt="twitter link" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+          <svg alt="twitter link" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor"
+            viewBox="0 0 24 24">
             <path
               d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
           </svg>
@@ -539,8 +538,9 @@
 
   <a href="https://api.whatsapp.com/send?phone=+5585996826836&text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento"
     target="_blank" rel="noopener noreferrer" aria-label="whatsapp link"
-    class="flex items-center justify-center w-16 h-16 fixed bottom-2 right-2 hover:drop-shadow-xl hover:scale-95 drop-shadow-md transition-transform bg-green-500 border border-white rounded-full mb-4 mr-4">
-    <svg alt="whatsapp contact link" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="white" viewBox="0 0 24 24">
+    class="flex items-center justify-center w-16 h-16 fixed bottom-2 right-2 drop-shadow-md hover:drop-shadow-xl hover:scale-110 transition-transform bg-green-500 border border-white rounded-full mb-4 mr-4">
+    <svg alt="whatsapp contact link" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="white"
+      viewBox="0 0 24 24">
       <path
         d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
     </svg>
