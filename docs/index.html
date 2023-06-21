@@ -109,14 +109,19 @@
   <div x-show="open" @click="open = false" x-transition:enter="transition ease-out duration-300"
     x-transition:leave="transition ease-in duration-300" x-transition:enter-start="opacity-0"
     x-transition:enter-end="opacity-100" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
-    class="fixed inset-0 flex items-center justify-center z-50 p-6 bg-black bg-opacity-50">
+    class="fixed inset-0 flex items-center justify-center z-50 p-6 bg-secondary bg-opacity-50">
 
     <!-- Modal -->
-    <div x-show="open" @click.prevent.stop class="bg-white rounded-lg shadow-lg p-6 w-1/3 mx-auto"
+    <div x-show="open" @click.prevent.stop class="bg-white rounded-lg shadow-xl p-6 w-1/3 mx-auto border-2 border-secondary"
       x-transition:enter="transition ease-out duration-300" x-transition:leave="transition ease-in duration-300"
       x-transition:enter-start="translate-y-full" x-transition:enter-end="translate-y-0"
       x-transition:leave-start="translate-y-0" x-transition:leave-end="translate-y-full">
-      <h2 class="text-2xl mb-4">Inscreva-se</h2>
+      <h2 class="text-2xl mb-4 flex justify-center items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M20.893 13.393l-1.135-1.135a2.252 2.252 0 01-.421-.585l-1.08-2.16a.414.414 0 00-.663-.107.827.827 0 01-.812.21l-1.273-.363a.89.89 0 00-.738 1.595l.587.39c.59.395.674 1.23.172 1.732l-.2.2c-.212.212-.33.498-.33.796v.41c0 .409-.11.809-.32 1.158l-1.315 2.191a2.11 2.11 0 01-1.81 1.025 1.055 1.055 0 01-1.055-1.055v-1.172c0-.92-.56-1.747-1.414-2.089l-.655-.261a2.25 2.25 0 01-1.383-2.46l.007-.042a2.25 2.25 0 01.29-.787l.09-.15a2.25 2.25 0 012.37-1.048l1.178.236a1.125 1.125 0 001.302-.795l.208-.73a1.125 1.125 0 00-.578-1.315l-.665-.332-.091.091a2.25 2.25 0 01-1.591.659h-.18c-.249 0-.487.1-.662.274a.931.931 0 01-1.458-1.137l1.411-2.353a2.25 2.25 0 00.286-.76m11.928 9.869A9 9 0 008.965 3.525m11.928 9.868A9 9 0 118.965 3.525" />
+        </svg>
+        Entre para a colmeia</h2>
+      <p class="mb-4">Por enquanto, somente "abelhas" que receberem nosso convite, estarão aptos a participar. Mas a sua chance está perto de chegar. Cadastre-se aqui e aguarde nosso zumbido.</p>
 
       <form @submit.prevent="">
         <div class="mb-4">
@@ -158,7 +163,10 @@
         </div>
 
         <button x-show="!sending.join" type="button" @click="submitFormJoin()"
-          class="w-full text-white bg-primary hover:bg-secondary focus:outline-none rounded-lg text-sm px-5 py-2.5 text-center">
+          class="w-full text-white bg-primary hover:bg-secondary focus:outline-none rounded-lg text-sm px-5 py-2.5 text-center flex justify-center items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+          </svg>
           Enviar
         </button>
 
