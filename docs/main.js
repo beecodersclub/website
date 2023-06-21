@@ -120,6 +120,6 @@ function sendFormData() {
 }
 
 // Attach event listener to the button
-const sendCollaboratorButton = document.getElementById('sendCollaborator');
+const sendCollaboratorButton = document.getElementById('btn-join');
 sendCollaboratorButton.addEventListener('click', sendFormData);
 

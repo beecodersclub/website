@@ -26,6 +26,7 @@
   <!-- CSS files -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <link href="output.css" rel="stylesheet" />
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.1/dist/cdn.min.js"></script>
 
   <!-- Favicon -->
   <link rel="icon" href="images/beecoderslogo.svg" type="image/x-icon" />
@@ -46,7 +47,7 @@
   <meta name="twitter:image:alt" content="Logo of BeeCoders Club" />
 </head>
 
-<body>
+<body x-data="data()">
   <!-- Navigation -->
   <nav class="bg-primary border-b-4 border-highlight shadow-lg fixed top-0 w-full z-50 overflow-hidden">
     <div class="container mx-auto px-6 py-4 flex flex-wrap justify-between">
@@ -97,87 +98,74 @@
         profissionais de TI em todo o mundo, trabalhando juntos para impulsionar a
         inovação e a excelência técnica.
       </h3>
-      <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal"
+      <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" @click="open = true"
         class="bg-highlight text-black hover:bg-primary py-2 px-4 font-semibold rounded-lg shadow-md hover:shadow-xl transition-all">
         Entre para a Colmeia
       </button>
     </div>
   </div>
 
-  <!-- MODAL -->
+  <!-- Div externo -->
+  <div x-show="open" @click="open = false" x-transition:enter="transition ease-out duration-300"
+    x-transition:leave="transition ease-in duration-300" x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+    class="fixed inset-0 flex items-center justify-center z-50 p-6 bg-black bg-opacity-50">
 
-  <div id="authentication-modal" tabindex="-1" aria-hidden="true"
-    class="fixed inset-0 items-center justify-center z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto h-[calc(100%-1rem)] max-h-full">
-    <div class="relative max-w-md mx-auto my-auto max-h-full">
-      <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-        <button type="button"
-          class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800"
-          data-modal-hide="authentication-modal">
-          <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd"
-              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-              clip-rule="evenodd"></path>
-          </svg>
-          <span class="sr-only">Close modal</span>
-        </button>
-        <div class="px-6 py-6 lg:px-8">
-          <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-black flex items-center">
-            <img src="./images/register.svg" class="h-8 mr-2" />
-            Faça parte da Colmeia
-          </h3>
-          <p class="mb-4">Por enquanto, somente "abelhas" que receberem nosso convite, estarão aptos a participar. Mas a
-            sua chance está perto de chegar.
-            Cadastre-se aqui e aguarde nosso zumbido.</p>
-          <form class="space-y-6" action="#">
-            <div>
-              <input type="text" name="text" placeholder="Nome" id="collaboratorName"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5"
-                required />
-            </div>
-            <div>
-              <input type="email" name="email" id="collaboratorEmail"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
-                placeholder="nome@dominio.com" required />
-            </div>
-            <div>
-              <input type="text" name="phone" id="collaboratorPhone"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
-                placeholder="Telefone" required />
-            </div>
-            <div>
-              <input type="text" name="text" placeholder="Cargo" id="collaboratorRole"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500"
-                required />
-            </div>
-            <div>
-              <input type="text" name="text" placeholder="Competências" id="collaboratorSkill"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                required />
-            </div>
-            <div id="join-form-message" class="text-black text-center m-0 p-0">
-              <div style="display: none;" class="pb-0 flex justify-center loading-icon">
-                <svg class="animate-spin h-5 w-5 text-[#9C51D2]" xmlns="http://www.w3.org/2000/svg" fill="none"
-                  viewBox="0 0 24 24">
-                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                  <path class="opacity-75" fill="currentColor"
-                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
-                  </path>
-                </svg>
-              </div>
-              <strong class="message"></strong>
-            </div>
+    <!-- Modal -->
+    <div x-show="open" @click.prevent.stop class="bg-white rounded-lg shadow-lg p-6 w-1/3 mx-auto"
+      x-transition:enter="transition ease-out duration-300" x-transition:leave="transition ease-in duration-300"
+      x-transition:enter-start="translate-y-full" x-transition:enter-end="translate-y-0"
+      x-transition:leave-start="translate-y-0" x-transition:leave-end="translate-y-full">
+      <h2 class="text-2xl mb-4">Inscreva-se</h2>
 
-            <button type="button" id="sendCollaborator"
-              class="w-full text-white bg-primary hover:bg-secondary focus:outline-none rounded-lg text-sm px-5 py-2.5 text-center">
-              Enviar
-            </button>
-          </form>
+      <form @submit.prevent="">
+        <div class="mb-4">
+          <input type="text" x-model="formJoin.name"
+            class="w-full px-3 py-2 border border-primary rounded shadow-[inset_2px_-2px_5px_rgba(0,0,0,0.3)]"
+            placeholder="Nome">
         </div>
-      </div>
+
+        <div class="mb-4">
+          <input type="email" x-model="formJoin.email"
+            class="w-full px-3 py-2 border border-primary rounded shadow-[inset_2px_-2px_5px_rgba(0,0,0,0.3)]"
+            placeholder="E-mail">
+        </div>
+
+        <div class="mb-4">
+          <input type="text" x-model="formJoin.phone"
+            class="w-full px-3 py-2 border border-primary rounded shadow-[inset_2px_-2px_5px_rgba(0,0,0,0.3)]"
+            placeholder="Telefone">
+        </div>
+
+        <div class="mb-4">
+          <input type="text" x-model="formJoin.role"
+            class="w-full px-3 py-2 border border-primary rounded shadow-[inset_2px_-2px_5px_rgba(0,0,0,0.3)]"
+            placeholder="Área de atuação">
+        </div>
+        <div class="mb-4">
+          <input type="text" x-model="formJoin.skills"
+            class="w-full px-3 py-2 border border-primary rounded shadow-[inset_2px_-2px_5px_rgba(0,0,0,0.3)]"
+            placeholder="Competências">
+        </div>
+        <div x-show="sending.join" class="flex justify-center mx-auto">
+          <svg class="animate-spin h-5 w-5 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor"
+              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+            </path>
+          </svg> Enviando..
+        </div>
+
+        <button x-show="!sending.join" type="button" @click="submitFormJoin()"
+          class="w-full text-white bg-primary hover:bg-secondary focus:outline-none rounded-lg text-sm px-5 py-2.5 text-center">
+          Enviar
+        </button>
+
+      </form>
     </div>
   </div>
-  <!-- END MODAL -->
+
 
   <section id="info" class="bg-gray py-4">
     <div class="container mx-auto lg:px-52">
@@ -467,26 +455,26 @@
       <p class="text-white text-center md:px-24">Na Bee Coders, entendemos que cada projeto tem suas necessidades
         únicas. Seja uma aplicação web personalizada, um aplicativo mobile inovador ou um serviço de manutenção de
         sistemas, estamos aqui para te ajudar a atingir os melhores resultados .</p>
-      <form class="rounded px-8 pt-6 max-w-xl mx-auto">
+      <form class="rounded px-8 pt-6 max-w-xl mx-auto" @submit.prevent>
         <div class="mb-4">
           <input
             class="shadow appearance-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="username" type="text" placeholder="Nome">
+            id="username" type="text" placeholder="Nome" x-model="formContact.name">
         </div>
         <div class="mb-6">
           <input
             class="shadow appearance-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="emailBudget" type="email" placeholder="Email">
+            id="emailBudget" type="email" placeholder="Email" x-model="formContact.email">
         </div>
         <div class="mb-6">
           <input
             class="shadow appearance-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="phone" type="text" placeholder="Telefone">
+            id="phone" type="text" placeholder="Telefone" x-model="formContact.phone">
         </div>
         <div class="mb-4">
           <textarea
             class="shadow appearance-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="message" placeholder="Mensagem" rows="6"></textarea>
+            id="message" placeholder="Mensagem" rows="6" x-model="formContact.message"></textarea>
         </div>
         <p id="successMessage" style="display: none;" class="text-white text-center mb-6">
           <strong>
@@ -494,7 +482,7 @@
           </strong>
         </p>
         <div class="flex justify-center">
-          <span id="loadingIndicator" style="display: none;" class="mb-6">
+          <span x-show="sending.contact" class="mb-6">
             <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
               viewBox="0 0 24 24">
               <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
@@ -505,7 +493,7 @@
           </span>
         </div>
         <div class="flex items-center justify-center">
-          <button type="button" id="sendBudget"
+          <button x-show="!sending.contact" type="button" @click="submitFormContact()"
             class="bg-highlight text-black hover:bg-primary py-2 px-4 font-semibold rounded-lg shadow-md transition-all">
             Enviar
           </button>
@@ -565,46 +553,44 @@
     </svg>
   </a>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="main.js"></script>
+
   <script>
-    document
-      .getElementById("menuButton")
-      .addEventListener("click", function () {
-        var menu = document.getElementById("menu");
-        if (menu.style.height === "auto") {
-          menu.style.height = "0";
-        } else {
-          menu.style.height = "auto";
+    function data() {
+      return {
+        open: false,
+        formJoin: { name: '', email: '', phone: '', role: '', skills: '' },
+        formContact: { name: '', email: '', phone: '', message: '' },
+        sending: {
+          join:false,
+          contact:false
+        },
+        submitFormJoin() {
+          this.sending.join = true;
+          axios.post('https://farmaciasdeplantao.info/api/join', this.formJoin)
+            .then(response => {
+              this.sending.join = false;
+              this.open = false; // Fecha o modal
+            })
+            .catch(error => {
+              console.log(error);
+              this.sending.join = false;
+            });
+        },
+        submitFormContact() {
+          this.sending.contact = true;
+          axios.post('https://farmaciasdeplantao.info/api/contact', this.formContact)
+            .then(response => {
+              this.sending.contact = false;
+              this.open = false; // Fecha o modal
+            })
+            .catch(error => {
+              console.log(error);
+              this.sending.contact = false;
+            });
         }
-      });
-    document
-      .querySelector('[data-modal-toggle="authentication-modal"]')
-      .addEventListener("click", function () {
-        document.getElementById("authentication-modal").style.display =
-          "block";
-      });
-
-    document
-      .querySelector('[data-modal-hide="authentication-modal"]')
-      .addEventListener("click", function () {
-        document.getElementById("authentication-modal").style.display =
-          "none";
-      });
-    var modal = document.getElementById("authentication-modal");
-
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
       }
-    };
-
-    window.addEventListener("keydown", function (event) {
-      if (event.key === "Escape") {
-        modal.style.display = "none";
-      }
-    });
+    }
   </script>
 </body>
 
