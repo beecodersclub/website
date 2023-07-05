@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Optimize for IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+        content="A vibrant and collaborative community of developers around the world, working together to drive innovation and technical excellence." />
+    <!-- General description for SEO -->
+    <meta name="keywords" content="beecoders, community, developers, software development, mobile apps" />
+    <!-- SEO keywords -->
+    <meta name="author" content="Bee Coders" />
+    <!-- Site author -->
+
+    <title>Bee Coders</title>
+
+    <!-- Preconnect to required origins -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- CSS files -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://beecoders.club/output.css" rel="stylesheet" />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.1/dist/cdn.min.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://beecoders.club/images/beecoderslogo.svg" type="image/x-icon" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://beecoders.club" />
+    <meta property="og:title" content="Bee Coders" />
+    <meta property="og:description"
+        content="A vibrant and collaborative community of developers around the world, working together to drive innovation and technical excellence." />
+    <meta property="og:image" content="https://beecoders.club/images/social-media.webp" />
+    <meta property="og:site_name" content="Bee Coders" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@BeeCoders" />
+    <!-- Your twitter handle -->
+    <meta name="twitter:image:alt" content="Logo of BeeCoders Club" />
+</head>
+
+<body x-data="data()">
+    <!-- Navigation -->
+    <nav class="bg-primary border-b-4 border-highlight shadow-lg fixed top-0 w-full z-50 overflow-hidden">
+        <div class="container mx-auto px-6 py-4 flex flex-wrap justify-between">
+            <div class="flex items-center flex-shrink-0 text-white mr-6">
+                <img class="w-auto h-10 md:h-12" src="https://beecoders.club/images/logo-horizontal.svg"
+                    alt="bee coders logo" />
+            </div>
+            <div class="block lg:hidden">
+                <button id="menuButton"
+                    class="flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white">
+                    <svg class="fill-current h-5 w-5" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v15z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="h-0 transition-all justify-center items-center lg:flex lg:w-auto lg:h-auto" id="menu">
+                <div class="text-sm flex flex-wrap lg:flex-end justify-center items-center">
+                    <a href="#home"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-white text hover:underline mr-4 text-lg">
+                        Home
+                    </a>
+                    <a href="#about"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-white text hover:underline mr-4 text-lg">
+                        Sobre
+                    </a>
+                    <a href="#services"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-white text hover:underline mr-4 text-lg">
+                        Serviços
+                    </a>
+                    <a href="#team"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-white text hover:underline mr-4 text-lg ">
+                        Equipe
+                    </a>
+                    <a href="#budget"
+                        class="inline-block text-lg px-4 py-2 drop-shadow-lg leading-none border rounded-xl text-white border-white hover:text-primary hover:bg-white mt-4 lg:mt-0 transition-all">
+                        Contato
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="team" class="py-16 md:py-32">
+        <div class="container mx-auto px-8">
+            <h2 class="text-3xl font-semibold flex items-center justify-center mb-4 px-4 md:px-52">
+                <img src="https://beecoders.club/images/beecoderslogo.svg" class="mr-2" width="40"
+                    alt="beecoders icon" />
+                Princípio DRY
+            </h2>
+            <h3 class="text-2xl font-semibold flex items-center justify-center mb-8">Dont Repeat Yourself</h3>
+            
+            <div class="mb-8">
+                <div class="grid grid-cols-12 gap-6 px-2 md:px-0">
+                    <div class="lg:col-span-6 col-span-12">
+                        <img src="/images/bart-dry.gif" alt="">
+                    </div>
+                    <div class="lg:col-span-6 col-span-12 text-justify">
+                        <p class="mb-4">
+                            Hoje, vamos falar sobre um princípio essencial na programação que todos os desenvolvedores devem ter em
+                            mente ao codificar: o Princípio DRY, ou “Don’t Repeat Yourself” (não se repita). O objetivo deste artigo
+                            é fornecer uma visão geral deste conceito e explicar como pode tornar o seu código mais eficiente e
+                            sustentável.</p>
+                    </div>
+                  </div>
+                    
+                </div>
+                
+    
+    
+                <h3 class="text-2xl font-semibold">O que é o Princípio DRY?</h3>
+    
+                <p class="mb-4">O Princípio DRY, também conhecido como "não se repita", é um conceito de programação que é
+                    fundamental para o desenvolvimento de software. Ele foi formulado por Andy Hunt e Dave Thomas no livro
+                    "The Pragmatic Programmer", publicado pela primeira vez em 1999. O Princípio DRY afirma que "Cada pedaço
+                    de conhecimento deve ter uma representação única, não ambígua e autoritativa dentro de um sistema". Em
+                    outras palavras, seu código não deve conter redundâncias de funcionalidades ou repetições
+                    desnecessárias.</p>
+    
+                <h3 class="text-2xl font-semibold">Por que o Princípio DRY é importante?</h3>
+    
+                <p class="mb-4">Um código que não segue o princípio DRY geralmente é mais difícil de manter e pode ser mais
+                    propenso a erros. Se uma alteração precisa ser feita em uma funcionalidade que é repetida em vários
+                    lugares, todas essas repetições precisarão ser localizadas e alteradas corretamente. Isto não só aumenta
+                    o tempo de desenvolvimento, mas também o risco de erros. Além disso, a repetição de código também pode
+                    tornar o software mais difícil de entender e, consequentemente, mais difícil de manter ou ampliar.</p>
+    
+                <h3 class="text-2xl font-semibold">Como aplicar o Princípio DRY</h3>
+    
+                <p class="mb-4">
+                    O Princípio DRY pode ser aplicado de diversas formas, dependendo da linguagem de programação e do
+                    projeto. Abaixo estão algumas estratégias gerais:
+    
+                    Utilize funções e métodos: Ao invés de repetir o mesmo bloco de código várias vezes, escreva uma função
+                    ou método que pode ser chamado quando necessário.
+    
+                    Aplique a abstração: Se você perceber que várias partes do seu código estão fazendo essencialmente a
+                    mesma coisa, mas com pequenas variações, considere criar uma abstração que possa lidar com todas essas
+                    variações.
+    
+                    Reutilize o código com bibliotecas e módulos: Se várias partes do seu código estão usando a mesma
+                    lógica, coloque essa lógica em uma biblioteca ou módulo que pode ser importado e utilizado onde
+                    necessário.
+    
+                    Faça uso de princípios e padrões de design de software: Muitos desses princípios e padrões (como o
+                    princípio da responsabilidade única e o padrão de fábrica) ajudam a promover a não repetição do código.
+                </p>
+    
+                <h3 class="text-2xl font-semibold">Conclusão</h3>
+    
+                <p class="mb-4">Embora o Princípio DRY seja uma ferramenta poderosa para melhorar a eficiência e a
+                    manutenção do seu código, é importante também lembrar que a aplicação cega de qualquer princípio pode
+                    levar a problemas. O objetivo não é eliminar toda e qualquer repetição a qualquer custo, mas sim
+                    eliminar a duplicação desnecessária e prejudicial. No final das contas, o equilíbrio e o bom senso são
+                    chaves.
+    
+                    Adotar o Princípio DRY pode ajudá-lo a escrever código de alta qualidade, fácil de manter e escalar.
+                    Então, na próxima vez que você estiver codificando, lembre-se: Não se repita!
+    
+                    Continue conectado com a Bee Coders para mais dicas e orientações sobre como tornar sua codificação mais
+                    eficiente e eficaz!
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="budget" class="bg-secondary py-8 md:py-24">
+        <div class="container mx-auto px-4 md:px-52">
+            <h2 class="text-2xl text-white font-semibold flex items-center justify-center mb-4">
+                Entre em Contato
+            </h2>
+            <p class="text-white text-center md:px-24">Na Bee Coders, entendemos que cada projeto tem suas necessidades
+                únicas. Seja uma aplicação web personalizada, um aplicativo mobile inovador ou um serviço de manutenção
+                de
+                sistemas, estamos aqui para te ajudar a atingir os melhores resultados .</p>
+            <form class="rounded px-8 pt-6 max-w-xl mx-auto" @submit.prevent>
+                <div class="mb-4">
+                    <input
+                        class="shadow appearance-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="username" type="text" placeholder="Nome" x-model="formContact.name">
+                </div>
+                <div class="mb-6">
+                    <input
+                        class="shadow appearance-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="emailBudget" type="email" placeholder="Email" x-model="formContact.email">
+                </div>
+                <div class="mb-6">
+                    <input
+                        class="shadow appearance-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="phone" type="text" placeholder="Telefone" x-model="formContact.phone">
+                </div>
+                <div class="mb-4">
+                    <textarea
+                        class="shadow appearance-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="message" placeholder="Mensagem" rows="6" x-model="formContact.message"></textarea>
+                </div>
+                <p id="successMessage" style="display: none;" class="text-white text-center mb-6">
+                    <strong>
+                        Enviado com sucesso!
+                    </strong>
+                </p>
+                <div class="flex justify-center">
+                    <span x-show="sending.contact" class="mb-6">
+                        <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
+                            </circle>
+                            <path class="opacity-75" fill="currentColor"
+                                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                            </path>
+                        </svg>
+                    </span>
+                </div>
+                <div class="flex items-center justify-center">
+                    <button x-show="!sending.contact" type="button" @click="submitFormContact()"
+                        class="bg-highlight text-black hover:bg-primary py-2 px-4 font-semibold rounded-lg shadow-md transition-all">
+                        Enviar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <footer class="text-start bg-primary text-white px-4 py-10 md:px-0 md:py-2">
+        <div class="container mx-auto block md:flex md:justify-between md:items-center justify-center">
+            <div class="py-4">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <p class="m-0 text-sm">
+                        BeeCoders &copy; 2023. Todos os direitos reservados.
+                    </p>
+                </div>
+                <p class="m-0 text-sm text-gray-500">
+                    <a target="_blank" href="mailto:contact@beecoders.club">contact@beecoders.club</a>
+                </p>
+            </div>
+
+            <div class="ms-auto flex items-start">
+                <a href="#" class="m-0 text-sm mr-4 underline">Política de privacidade</a>
+                <a href="https://www.instagram.com/beecodersclub/" aria-label="instagram link">
+                    <svg alt="instagram link" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                </a>
+                <a href="www.linkedin.com/in/beecodersclub/" class="mx-4" aria-label="linkedin link">
+                    <svg alt="linkedin link" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                    </svg>
+                </a>
+                <a href="https://twitter.com/beecodersclub" aria-label="twitter link">
+                    <svg alt="twitter link" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://api.whatsapp.com/send?phone=+5585996826836&text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento"
+        target="_blank" rel="noopener noreferrer" aria-label="whatsapp link"
+        class="flex items-center justify-center w-16 h-16 fixed bottom-2 right-2 drop-shadow-md hover:drop-shadow-xl hover:scale-110 transition-transform bg-green-500 border border-white rounded-full mb-4 mr-4">
+        <svg alt="whatsapp contact link" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="white"
+            viewBox="0 0 24 24">
+            <path
+                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+        </svg>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+        function data() {
+            return {
+                open: false,
+                formJoin: { name: '', email: '', phone: '', role: '', skills: '' },
+                formContact: { name: '', email: '', phone: '', message: '' },
+                sending: {
+                    join: false,
+                    contact: false
+                },
+                submitFormJoin() {
+                    this.sending.join = true;
+                    axios.post('https://farmaciasdeplantao.info/api/join', this.formJoin)
+                        .then(response => {
+                            this.sending.join = false;
+                            this.open = false; // Fecha o modal
+                        })
+                        .catch(error => {
+                            console.log(error);
+                            this.sending.join = false;
+                        });
+                },
+                submitFormContact() {
+                    this.sending.contact = true;
+                    axios.post('https://farmaciasdeplantao.info/api/contact', this.formContact)
+                        .then(response => {
+                            this.sending.contact = false;
+                            this.open = false; // Fecha o modal
+                        })
+                        .catch(error => {
+                            console.log(error);
+                            this.sending.contact = false;
+                        });
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
